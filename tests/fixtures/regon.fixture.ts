@@ -84,7 +84,7 @@ export { expect };
 //        ↓
 //   use(fixture)
 //        ↓
-// Test otrzymuje fiksturę jako zależność
+// Test dostaje fiksturę jako zależność
 
 //  - Playwright zarządza cyklem życia fikstur
 //  - tworzy je przed testem i niszczy po teście
