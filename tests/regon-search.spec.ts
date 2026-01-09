@@ -1,30 +1,26 @@
-// Importuję test i expect z customowej fukstury (custom fixture)
-// zdefiniowanej w pliku regon.fixture.ts
+// Importuję test i expect z customowej fukstury (custom fixture) zdefiniowanej w regon.fixture.ts
 // Ta fikstura: 1. rozszerza standardową fiksturę Playwright 
 // 2. stronę regonPage z metodami do interakcji z aplikacją, 
-//    wstrzykuje ją do każdego testu 
-// 3. Enkapsuluje logikę: wyszukiwania wg REGON, odczytywania komunikatów błędów
-//   oraz odczytywania rezultatu: nazwy firmy, z wyników wyszukiwania 
-import { test, expect } from './fixtures/regon.fixture';
+//    (wstrzykuje ją do każdego testu)
+// 3. Enkapsuluje logikę: a. wyszukiwania wg REGON, b. odczytywania komunikatów błędów
+//    c. odczytywania rezultatu (nazwy firmy) z wyników wyszukiwania 
 
-// Dane testowe i test case'y dla funkcjonalności wyszukiwania podmiotów wg REGON
-// (przypadki negatywne ooraz pozytywne)
-// Dane są zgromadzone w tablicach obiektów, a testy iterują przez te tablice
-// To model data-driven testing.
+// Dane testowe są w tablicach obiektów (negativeCases, positiveCases), 
+// a testy iterują przez te tablice (data-driven testing).
 
 // poniżej: definicja test suite: grupuje wszystkie testy związane z wyszukiwaniem wg REGON
-// beforeEach przed każdym testem: 
-// - m.in. otwiera stronę wyszukiwania wg REGON
-                                
+// beforeEach przed każdym testem m.in. otwiera stronę wyszukiwania wg REGON
+
+import { test, expect } from './fixtures/regon.fixture';                                
 test.describe('Wyszukiwanie podmiotów wg REGON – ', () => {
 
   test.beforeEach(async ({ regonPage }) => {
     await regonPage.open();
   });
 
-  // negativeCases, positiveCases: tablice obiektów z danymi testowymi
-  // pole expectedRegex - wyrażenie regularne do weryfikacji komunikatów błędów
-  // expectedCompanyRegex -  
+  // tablice negativeCases, positiveCases:
+  // pola: expectedRegex - wyrażenie regularne do weryfikacji komunikatów błędów
+  //       expectedCompanyRegex - wyrażenie regularne do weryfikacji nazwy firmy w wynikach wyszukiwania 
 
   // ---------------------------
   // test case'y negatywne
