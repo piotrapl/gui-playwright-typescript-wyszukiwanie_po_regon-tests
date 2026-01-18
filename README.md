@@ -1,6 +1,6 @@
 # Testy automatyczne REGON – Playwright (TypeScript)
 
-## 📌 Opis projektu
+## Opis projektu
 Projekt jest zestawem **testów automatycznych UI (E2E)** napisanych w **Playwright + TypeScript**, przygotowanym jako część **portfolio QA Automation**.
 
 Testy weryfikują funkcjonalność wyszukiwania firm po numerze **REGON** na oficjalnej stronie rządowej:
@@ -8,14 +8,14 @@ https://wyszukiwarkaregon.stat.gov.pl
 
 ---
 
-## 🎯 Testowana funkcjonalność
+## Testowana funkcjonalność
 - Wyszukiwanie firmy po numerze **REGON**
 - Walidacja błędnych numerów REGON
 - Wyświetlanie danych firmy dla poprawnych REGONów
 
 ---
 
-## 🧪 Scenariusze testowe
+## Scenariusze testowe
 ### Przypadki negatywne
 - REGON o nieprawidłowej długości
 - REGON z błędną cyfrą kontrolną
@@ -27,7 +27,7 @@ https://wyszukiwarkaregon.stat.gov.pl
 
 ---
 
-## 🛠️ Technologie i narzędzia
+## Technologie i narzędzia
 - **Playwright**
 - **TypeScript**
 - **Playwright Test Runner**
@@ -36,18 +36,18 @@ https://wyszukiwarkaregon.stat.gov.pl
 
 ---
 
-## 🧩 Zastosowane dobre praktyki automatyzacji
-- ✅ Własne **fixtures Playwright**
-- ✅ Testy data-driven
-- ✅ Odporne selektory (ARIA, regex)
-- ✅ Assercje odporne na zmiany treści UI
-- ✅ Zrzuty ekranu dla **każdego testu** (PASS i FAIL)
-- ✅ Screenshoty dołączone do raportu HTML
-- ✅ Czytelna i łatwa w utrzymaniu struktura testów
+## Zastosowane dobre praktyki automatyzacji
+-  Własne **fixtures Playwright**
+-  Testy data-driven
+-  Odporne selektory (ARIA, regex)
+-  Asercje odporne na zmiany treści UI
+-  Zrzuty ekranu dla **każdego testu** (PASS i FAIL)
+-  Screenshoty dołączone do raportu HTML
+-  Czytelna i łatwa w utrzymaniu struktura testów
 
 ---
 
-## ▶️ Uruchamianie testów lokalnie
+## Uruchamianie testów lokalnie
 ```bash
 npm install
 npx playwright test
