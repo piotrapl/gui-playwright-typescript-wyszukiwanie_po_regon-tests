@@ -1,3 +1,8 @@
+// package.json
+// Automatycznie wygenerowany plik konfiguracyjny projektu Node.js
+// z zależnościami do testów Playwright.
+// Nie edytujemy tego pliku ręcznie - to może wpłynąć na działanie projektu.
+
 {
   "name": "playwright-gui-fix-dd-pole_regon-tests",
   "version": "1.0.0",
